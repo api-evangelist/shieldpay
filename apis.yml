@@ -1,8 +1,38 @@
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 13
+  pass: local-v1
 aid: shieldpay
 name: Shieldpay
-description: Shieldpay is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Shieldpay is an FCA-authorised (firm reference 770210) payments platform built
+  for the UK legal and professional-services sector, offering a regulated
+  alternative to holding client money in traditional client accounts. It combines
+  KYC/due-diligence verification of parties, safeguarding of funds with tier-1
+  banking partners (Citi and ClearBank), and audited disbursement of payments,
+  supporting M&A holdbacks/earnouts and shareholder distributions, multi-claimant
+  litigation settlements, escrow, conveyancing, and ongoing client-money
+  management via its Third-Party Managed Account (TPMA) service. Shieldpay has
+  processed over £18 billion and serves 40+ of the UK top-100 law firms. Its
+  Partner API lets integrators programmatically create projects, manage payers
+  and payees, run KYC, and authorise payments; the API secures every request with
+  mutual TLS, an API key, an RSA-SHA256 request signature, a v4-UUID RequestID for
+  idempotency, and IP whitelisting, and delivers real-time events over webhooks.
 url: https://raw.githubusercontent.com/api-evangelist/shieldpay/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://d24lr4zqs1tgqh.cloudfront.net/69dd90cd-7657-4b6d-8bb5-361a7e0d99d6.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,10 +41,34 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Payments
+- Escrow
+- Legal Technology
+- Fintech
+- Compliance
+- KYC
+- Banking
+apis:
+- name: Shieldpay Partner API
+  description: >-
+    REST API to manage payment workflows end to end — create projects, manage
+    payers and payees, run KYC verification, and authorise payments to disburse
+    funds securely. Secured with mTLS + API key + RSA-SHA256 request signing,
+    v4-UUID RequestID idempotency, timestamp and IP-whitelist controls, with
+    real-time webhook events.
+  humanURL: https://developers.shieldpay.com/
+  baseURL: https://api.partner.shieldpay.com
+  version: v1
+  properties:
+  - type: Documentation
+    url: https://developers.shieldpay.com/
+  - type: APIReference
+    url: https://developers.shieldpay.com/api-reference
+  - type: GettingStarted
+    url: https://developers.shieldpay.com/getting-started
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +77,57 @@ maintainers:
 common:
 - type: Website
   url: https://shieldpay.com/
+- type: DeveloperPortal
+  url: https://developers.shieldpay.com/
+- type: Documentation
+  url: https://developers.shieldpay.com/
+- type: APIReference
+  url: https://developers.shieldpay.com/api-reference
+- type: GettingStarted
+  url: https://developers.shieldpay.com/getting-started
+- type: Blog
+  url: https://www.shieldpay.com/blog
+- type: Support
+  url: https://www.shieldpay.com/contact-us
+- type: GitHubOrganization
+  url: https://github.com/shieldpay
+- type: Login
+  url: https://ent.shieldpay.com/
+- type: TermsOfService
+  url: https://www.shieldpay.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.shieldpay.com/privacy-notice
+- type: StatusPage
+  url: https://status.shieldpay.com/
+- type: Authentication
+  url: authentication/shieldpay-authentication.yml
+- type: Conventions
+  url: conventions/shieldpay-conventions.yml
+- type: Idempotency
+  url: conventions/shieldpay-conventions.yml
+- type: ErrorCatalog
+  url: errors/shieldpay-problem-types.yml
+- type: Webhooks
+  url: asyncapi/shieldpay-webhooks.yml
+- type: Sandbox
+  url: sandbox/shieldpay-sandbox.yml
+- type: Lifecycle
+  url: lifecycle/shieldpay-lifecycle.yml
+- type: WellKnown
+  url: well-known/shieldpay-well-known.yml
+- type: SecurityTxt
+  url: well-known/shieldpay-security.txt
+- type: Conformance
+  url: conformance/shieldpay-conformance.yml
+- type: Compliance
+  url: conformance/shieldpay-conformance.yml
+- type: VulnerabilityDisclosure
+  url: security/shieldpay-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.shieldpay.com/security/vulnerability-disclosure-policy
+- type: TrustCenter
+  url: security/shieldpay-trust-center.yml
+- type: DomainSecurity
+  url: security/shieldpay-domain-security.yml
+- type: LLMsTxt
+  url: llms/shieldpay-llms.txt

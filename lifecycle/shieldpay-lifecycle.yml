@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shieldpay.com/getting-started
+versioning:
+  scheme: uri-path
+  current: v1
+  example: https://api.partner.shieldpay.com/v1/projects
+status_page:
+  url: https://status.shieldpay.com/
+  provider: Atlassian Statuspage
+  components:
+  - Shieldpay Platform
+  - Client Portal
+  - Verification
+  - Payments
+  - Insights Dashboard
+  - API
+  - Emails
+  - Phone
+  - Website
+  - File Upload
+credential_lifecycle:
+  certificate: >-
+    One Signed Certificate issued per organisation at a time; reissue/rotation via
+    integrationsupport@shieldpay.com.
+  api_keys: >-
+    API keys do not expire; multiple may be active; deactivation on request.
+webhook_delivery:
+  retry_interval: 5 minutes
+  retry_window: 24 hours
+deprecation:
+  policy_url: null
+  note: No public deprecation/sunset-header policy documented at time of capture.
+sla:
+  url: null
+  note: No public uptime SLA published; status page tracks operational state.

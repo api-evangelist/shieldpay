@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shieldpay.com/getting-started/api-fundamentals/environments
+environments:
+- name: Sandbox
+  base_url: https://api.sandbox.partner.shieldpay.com
+  description: >-
+    A complete testing environment that mirrors Production functionality without
+    affecting real-world data or funds. Integrators are onboarded to Sandbox first.
+- name: Production
+  base_url: https://api.partner.shieldpay.com
+  description: The live environment for processing real transactions.
+separation:
+  credentials: environment-specific (certificates, API keys, config all separate)
+  ip_whitelist: >-
+    Sandbox and Production maintain separate IP whitelists; addresses must be
+    whitelisted on both. Recommended: whitelist development servers against
+    Sandbox and production servers against Production.
+test_values:
+  note: >-
+    Shieldpay does not publish magic test card/account values; the Sandbox mirrors
+    Production behaviour with non-live data provisioned during onboarding. No test
+    fixtures are published in the public docs — do not fabricate any.
+onboarding_contact: integrationsupport@shieldpay.com

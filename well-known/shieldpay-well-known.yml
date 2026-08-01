@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of /.well-known/ on Shieldpay hosts
+host: https://www.shieldpay.com
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  file: shieldpay-security.txt
+  note: RFC 9116, PGP-signed; Policy + Contact + Encryption keys
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+other_hosts:
+- host: https://shieldpay.com
+  path: /.well-known/security.txt
+  status: 404
+  note: canonical is served from www host
+- host: https://api.partner.shieldpay.com
+  path: /.well-known/security.txt
+  status: 403
+  note: API host rejects unauthenticated requests (mTLS + API key required)

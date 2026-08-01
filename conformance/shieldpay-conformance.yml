@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.shieldpay.com/security
+compliance_page: https://www.shieldpay.com/security
+standards:
+- id: iso-27001
+  conforms: true
+  evidence: >-
+    ISO 27001 (international standard for information security management systems);
+    Shieldpay obtained certification in December 2024.
+- id: cyber-essentials
+  conforms: true
+  evidence: UK government-backed Cyber Essentials certification.
+- id: fips-140-2
+  conforms: true
+  evidence: FIPS 140-2 validated Key Management System.
+- id: fca-authorised
+  conforms: true
+  evidence: >-
+    Authorised by the UK Financial Conduct Authority under the Payment Services
+    Regulations 2017 (firm reference number 770210); HMRC Trust Services
+    authorisation.
+- id: crest-cbest-pentest
+  conforms: true
+  evidence: Penetration testing by CREST-accredited security firms; CBEST framework.
+- id: oauth2
+  conforms: false
+  evidence: API uses mTLS + API key + request signing, not OAuth2.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors are conveyed by HTTP status codes; no application/problem+json documented.
+certifications:
+- ISO 27001
+- Cyber Essentials
+- FIPS 140-2
+regulatory:
+- FCA (FRN 770210)
+- HMRC Trust Services
+- PSR 2017

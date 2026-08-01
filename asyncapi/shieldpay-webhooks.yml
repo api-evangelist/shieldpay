@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shieldpay.com/getting-started/api-fundamentals/webhooks
+spec_type: Webhooks
+transport: https
+delivery:
+  method: POST
+  content_type: application/json
+  endpoint: single HTTPS endpoint you provide (configured via integrationsupport@shieldpay.com)
+  discriminator: type
+acknowledgement:
+  success: HTTP 200 OK
+  failure: any non-200 response or timeout is treated as a delivery failure
+retry_policy:
+  interval: 5 minutes
+  window: 24 hours
+  after_window: attempts stop for that event
+events:
+- type: KYC Success
+  description: A KYC verification completed successfully.
+- type: KYC Fail
+  description: A KYC verification failed.
+- type: Project status update
+  description: A project's status changed.
+- type: Source status update
+  description: A source (of funds) status changed.
+- type: Use status update
+  description: A use (of funds) status changed.
+- type: Payee verified
+  description: A payee was verified.
+note: >-
+  Shieldpay documents a webhook event surface but does not publish an AsyncAPI
+  document; this file captures the webhook catalog. See the API Reference for full
+  per-event payload details: https://developers.shieldpay.com/api-reference

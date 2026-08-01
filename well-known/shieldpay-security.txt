@@ -1,0 +1,28 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+# To discuss a security issue directly with our security team
+Contact: mailto:security[at]SHIELDPAY.com
+Expires: 2028-01-01T00:00:00.000Z
+Encryption: https://www.shieldpay.com/.well-known/pgp_key.txt
+Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/9F4351B4186EBD4539AE676FBEDDCBFB3F55D80B
+Policy: https://www.shieldpay.com/security/vulnerability-disclosure-policy
+Preferred-Languages: en
+Hiring: https://shieldpay.teamtailor.com
+Canonical: https://www.shieldpay.com/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEn0NRtBhuvUU5rmdvvt3L+z9V2AsFAmg3P84ACgkQvt3L+z9V
+2As17A//YqG6VCvy+kn1QP666U025UkNCiwSFO2OUSBysX8XZNWk4oDH6WuBWiAL
+bsjsAIhJMB+DqcFWghdS4h6k/PvrdpD7itPvVFYqstx+QoFCAPJFo+J/KZbyGM2I
+SEk3megBWk1ixaoh8aXjXcQwx3MQ7G94WzUrFIi5gSgtUWdRFAeCyl5t9PNGCcrm
+5ZlrxjcmQPNMFb4p7KOH+zv/h8wfAgUShboEe3EU+3TV8CQgEnXEXuaafG8ZWdDx
+n//qGa7+M9ZwhS0awWM90602zYth8APddmqX9FYw9IMMftYtp5sAMoZWwyeqTBeI
+r27ITiJ/9HTx5zhkfItlll3l2yJOQgd6Z4cAP7f5nR+THmfUnZI+EwUhlGJlfAns
+WeoEIGgfb0fDXboTbrbDH6nHNDi8ujMU9/5oeSJmqkWXecg990X5M2lTmTt7Q12N
+wiGhvYqSALUB8IuMzemRWb01MDM3WXGBZfaJojTkpt17Hexc1+h9/dtq4LQkMM+g
+HwwWWBq42b/A7enI3fpkmsFlr9NOrnWK+RwrcldR1ipyj5RyJQv70EjlWsrG1+MQ
+r3zd0qmqFq4rDkymFrG/k5SVTQaXumfp+3+iswEJDAHpqWOAU3Tr7vaFVZxSfYSX
+knXb3IVW9iRf4iWf5LKcaioK/G06mW9ygrFdTfN2YrUxh9BMHrY=
+=cF3R
+-----END PGP SIGNATURE-----

@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shieldpay.com/getting-started/api-fundamentals/authentication-and-security
+docs: https://developers.shieldpay.com/getting-started/api-fundamentals/authentication-and-security/authentication-mtls-and-api-keys
+summary:
+  types: [mutualTLS, apiKey, requestSignature]
+  api_key_in: [header]
+  api_key_header: Authorization
+  transport_security: mutual-TLS
+  oauth2_flows: []
+  note: >-
+    No OAuth2/OIDC. Access is layered: mutual TLS establishes the channel, an API
+    key identifies the organisation, and every request is signed and IP-gated.
+schemes:
+- name: mutualTLS
+  type: mutualTLS
+  description: >-
+    Client and server verify each other with certificates over an encrypted mTLS
+    channel. The integrator generates a Private Key and CSR; Shieldpay issues one
+    Signed Certificate per organisation at a time. Certificate lifecycle requests
+    go to integrationsupport@shieldpay.com.
+- name: apiKey
+  type: apiKey
+  in: header
+  parameter_name: Authorization
+  description: >-
+    A unique secret token identifying the organisation, sent in the Authorization
+    header of every request. API keys do not expire but can be deactivated; an
+    organisation may hold multiple active keys. Registration/deactivation via
+    integrationsupport@shieldpay.com.
+- name: requestSignature
+  type: http
+  scheme: signature
+  parameter_name: DigitalSignature
+  algorithm: RSA-SHA256
+  description: >-
+    Every request must carry a DigitalSignature header. The signature is an
+    RSA-SHA256 signature (Base64) over the concatenation, in order and with no
+    separators, of: Request URL (no query string) + API Key + RequestID +
+    Timestamp + raw Request Body, signed with the client Private Key.
+- name: ipWhitelist
+  type: networkControl
+  description: >-
+    All requests must originate from a whitelisted IP. Sandbox and Production
+    maintain separate whitelists. Changes via integrationsupport@shieldpay.com,
+    actioned within hours to two UK business days.

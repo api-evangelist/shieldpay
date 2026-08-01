@@ -1,0 +1,44 @@
+# Shieldpay
+
+> Shieldpay is an FCA-authorised (FRN 770210) payments platform for the UK legal and professional-services sector, providing a regulated alternative to traditional client accounts. It verifies parties (KYC), safeguards funds with tier-1 banking partners (Citi, ClearBank), and disburses audited payments for M&A, litigation settlements, escrow, conveyancing, and ongoing client-money management (TPMA). The Shieldpay Partner API lets integrators create projects, manage payers/payees, run KYC, and authorise payments, secured with mTLS + API key + RSA-SHA256 request signing, v4-UUID RequestID idempotency, timestamps, and IP whitelisting, with real-time webhooks.
+
+## API
+
+- [Shieldpay Partner API — Developer Portal](https://developers.shieldpay.com/): Programmatically manage payment workflows end to end.
+- [Getting Started](https://developers.shieldpay.com/getting-started): Key concepts and technical requirements to start an integration.
+- [API Reference](https://developers.shieldpay.com/api-reference): Full per-operation and per-webhook reference.
+- Production base URL: https://api.partner.shieldpay.com (v1)
+- Sandbox base URL: https://api.sandbox.partner.shieldpay.com
+
+## Authentication & conventions
+
+- [Authentication (mTLS & API Keys)](https://developers.shieldpay.com/getting-started/api-fundamentals/authentication-and-security/authentication-mtls-and-api-keys): mutual TLS + API key in the Authorization header.
+- [Request Signing](https://developers.shieldpay.com/getting-started/api-fundamentals/authentication-and-security/request-signing-digital-signature): RSA-SHA256 DigitalSignature header over URL + API key + RequestID + Timestamp + body.
+- [Additional Request Requirements](https://developers.shieldpay.com/getting-started/api-fundamentals/additional-request-requirements): RequestID (v4 UUID) for idempotency — duplicate returns 409; Timestamp (ISO 8601 UTC), ±5 min window else 401.
+- [IP Whitelisting](https://developers.shieldpay.com/getting-started/api-fundamentals/authentication-and-security/ip-whitelisting): separate whitelists per environment.
+- [Webhooks](https://developers.shieldpay.com/getting-started/api-fundamentals/webhooks): POST JSON events (KYC Success/Fail, Project/Source/Use status update, Payee verified); retry 5-min for 24h.
+
+## Artifacts (API Evangelist)
+
+- Authentication profile: authentication/shieldpay-authentication.yml
+- API conventions (idempotency, signing, versioning): conventions/shieldpay-conventions.yml
+- Error catalog: errors/shieldpay-problem-types.yml
+- Webhook catalog: asyncapi/shieldpay-webhooks.yml
+- Sandbox/environments: sandbox/shieldpay-sandbox.yml
+- Lifecycle & status page: lifecycle/shieldpay-lifecycle.yml
+- Conformance & compliance: conformance/shieldpay-conformance.yml
+- Vulnerability disclosure: security/shieldpay-vulnerability-disclosure.yml
+- Trust center: security/shieldpay-trust-center.yml
+- Domain security: security/shieldpay-domain-security.yml
+- Well-known index: well-known/shieldpay-well-known.yml
+
+## Company & security
+
+- [Website](https://shieldpay.com/)
+- [Security](https://www.shieldpay.com/security): ISO 27001 (Dec 2024), Cyber Essentials, FIPS 140-2 KMS, CREST/CBEST pen testing.
+- [Status page](https://status.shieldpay.com/): Atlassian Statuspage (Platform, API, Payments, Verification, ...).
+- [Vulnerability Disclosure Policy](https://www.shieldpay.com/security/vulnerability-disclosure-policy)
+- [Blog](https://www.shieldpay.com/blog)
+- [API Terms of Service](https://www.shieldpay.com/legal/api-tos)
+- [Privacy Notice](https://www.shieldpay.com/privacy-notice)
+- Support: integrationsupport@shieldpay.com

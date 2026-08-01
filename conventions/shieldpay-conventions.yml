@@ -1,0 +1,54 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shieldpay.com/getting-started/api-fundamentals
+authentication:
+  style: mtls+api-key+request-signature
+  ref: authentication/shieldpay-authentication.yml
+idempotency:
+  supported: true
+  header: RequestID
+  format: uuid-v4
+  scope: organisation
+  behavior: >-
+    Every request must include a RequestID header (a unique, randomly generated
+    v4 UUID). Reusing a RequestID that has already been processed returns HTTP 409
+    Conflict. Idempotency checks are scoped to the organisation, so separate
+    organisations can reuse the same RequestID without a 409.
+  conflict_status: 409
+request_signing:
+  header: DigitalSignature
+  algorithm: RSA-SHA256
+  signed_string: URL(no-query) + APIKey + RequestID + Timestamp + RawBody
+  encoding: base64
+timestamp:
+  header: Timestamp
+  format: ISO 8601 (UTC)
+  clock_skew: >-
+    Requests with a timestamp in the future or more than 5 minutes in the past are
+    rejected with HTTP 401 Unauthorized.
+  reject_status: 401
+versioning:
+  scheme: uri-path
+  current: v1
+  example_path: /v1/projects
+error_envelope:
+  format: json
+  notes: >-
+    HTTP status codes carry the outcome; 409 signals a duplicate RequestID, 401
+    signals auth/timestamp failure. See errors/shieldpay-problem-types.yml.
+webhooks:
+  ref: asyncapi/shieldpay-webhooks.yml
+  discriminator: type
+  ack: HTTP 200 OK
+  retry: 5-minute interval for up to 24 hours
+network_controls:
+  ip_whitelisting: true
+  environments_separate: true
+core_resources:
+- projects
+- payers
+- payees
+- sources
+- uses
+- payments
+- kyc

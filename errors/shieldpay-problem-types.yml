@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shieldpay.com/getting-started/api-fundamentals/additional-request-requirements
+format: http-status
+note: >-
+  Derived from the documented request-requirement behaviours in the Shieldpay
+  developer docs. No downloadable OpenAPI is published (docs are gated behind the
+  Theneo portal), so this catalogs the error conditions the docs state verbatim.
+  See the API Reference for per-operation responses:
+  https://developers.shieldpay.com/api-reference
+problems:
+- status: 409
+  title: Conflict
+  meaning: >-
+    A request reused a RequestID that has already been processed for this
+    organisation (idempotency replay).
+  remediation: >-
+    Generate a fresh v4 UUID RequestID per distinct request; retries of the same
+    logical request may reuse the RequestID to obtain the original result.
+  source: additional-request-requirements (idempotency)
+- status: 401
+  title: Unauthorized
+  meaning: >-
+    Authentication or timestamp validation failed — e.g. the Timestamp header is
+    in the future or more than 5 minutes in the past, or the API key / signature
+    / mTLS credentials are invalid.
+  remediation: >-
+    Send the current UTC time in the Timestamp header (ISO 8601), verify the
+    DigitalSignature construction, and confirm the API key and client certificate.
+  source: additional-request-requirements (timestamp) + authentication
