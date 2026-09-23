@@ -2,15 +2,6 @@ generated: '2026-07-21'
 method: searched
 source: live probes of /.well-known/ on Shieldpay hosts
 host: https://www.shieldpay.com
-documents:
-- path: /.well-known/security.txt
-  status: 200
-  file: shieldpay-security.txt
-  note: RFC 9116, PGP-signed; Policy + Contact + Encryption keys
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
 other_hosts:
 - host: https://shieldpay.com
   path: /.well-known/security.txt
@@ -20,3 +11,19 @@ other_hosts:
   path: /.well-known/security.txt
   status: 403
   note: API host rejects unauthenticated requests (mTLS + API key required)
+hosts:
+- host: https://www.shieldpay.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: shieldpay-security.txt
+    note: RFC 9116, PGP-signed; Policy + Contact + Encryption keys
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
