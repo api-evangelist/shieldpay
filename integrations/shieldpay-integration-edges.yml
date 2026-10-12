@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/shieldpay/integrations
+- https://n8n.io/integrations/shieldpay/
+- https://composio.dev/toolkits/shieldpay
+- https://monid.ai/tools/shieldpay
+checked:
+- https://composio.dev/toolkits/shieldpay
+- https://monid.ai/tools/shieldpay
+- https://n8n.io/integrations/shieldpay/
+- https://zapier.com/apps/shieldpay/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
