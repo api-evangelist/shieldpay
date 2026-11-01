@@ -64,6 +64,104 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Shieldpay is a company surfaced as a portfolio company of techstars and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Shieldpay is an FCA-authorised (firm reference 770210) payments platform built for the UK legal and professional-services sector, offering a regulated alternative to holding client money in traditional client accounts. It combines KYC/due-diligence verification of parties, safeguarding of funds with tier-1 banking partners (Citi and ClearBank), and audited disbursement of payments, supporting M&A holdbacks/earnouts and shareholder distributions, multi-claimant litigation settlements, escrow, conveyancing, and ongoing client-money management via its Third-Party Managed Account (TPMA) service. Shieldpay has processed over £18 billion and serves 40+ of the UK top-100 law firms. Its Partner API lets integrators programmatically create projects, manage payers and payees, run KYC, and authorise payments; the API secures every request with mutual TLS, an API key, an RSA-SHA256 request signature, a v4-UUID RequestID for idempotency, and IP whitelisting, and delivers real-time events over webhooks.
 
-Backed by: techstars — https://shieldpay.com/
+**Areas:** Company · Payments · Escrow · Legal Tech · Fintech · Compliance · KYC · Banking
+
+## Shieldpay on APIs.io
+
+Everything profiled for Shieldpay is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/shieldpay/](https://apis.io/providers/shieldpay/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Shieldpay Partner API](https://apis.io/apis/shieldpay/shieldpay-partner-api/) — REST API to manage payment workflows end to end — create projects, manage payers and payees, run KYC verification, and authorise payments to disburse funds…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Shieldpay Webhooks](https://apis.io/asyncapis/shieldpay/shieldpay-webhooks/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Shieldpay Authentication](https://apis.io/security/shieldpay/shieldpay-authentication/)
+- [Shieldpay Domain Security](https://apis.io/security/shieldpay/shieldpay-domain-security/)
+- [Shieldpay Trust Center](https://apis.io/security/shieldpay/shieldpay-trust-center/)
+- [Shieldpay Vulnerability Disclosure](https://apis.io/security/shieldpay/shieldpay-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://shieldpay.com/)
+- [Documentation](https://developers.shieldpay.com/)
+- [Getting started](https://developers.shieldpay.com/getting-started)
+- [API reference](https://developers.shieldpay.com/api-reference)
+- [Support](https://www.shieldpay.com/contact-us)
+- [Blog](https://www.shieldpay.com/blog)
+- [Security](https://www.shieldpay.com/security/vulnerability-disclosure-policy)
+- [Terms of service](https://www.shieldpay.com/terms-of-use)
+- [Privacy policy](https://www.shieldpay.com/privacy-notice)
+- [GitHub](https://github.com/shieldpay)
+- [Status](https://status.shieldpay.com/)
+
+## API Evangelist rating
+
+**Kin Score 47.5** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 43.4 |
+
+**Agent readiness 25.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 33.1** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/shieldpay/](https://apis.io/providers/shieldpay/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Shieldpay: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/shieldpay/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
